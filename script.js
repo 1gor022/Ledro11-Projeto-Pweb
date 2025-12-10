@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const ratingDivs = document.querySelectorAll('.rating');
-
+    highlightCurrentPage();
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 10);
     ratingDivs.forEach(div => {
         const score = parseFloat(div.dataset.score);
 
@@ -28,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         div.innerHTML = starsHTML;
 
         div.innerHTML += ` <span class="score-number">(${score})</span>`;
+        
     });
 
 
@@ -50,5 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    function highlightCurrentPage() {
+        const currentPath = window.location.pathname;
+        
+        const navLinks = document.querySelectorAll('header nav a');
 
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+
+            if (currentPath.includes(linkPath) && linkPath !== '#') {
+                link.classList.add('active');
+            } 
+            
+            if (currentPath === '/' && link.textContent === 'Home') {
+                link.classList.add('active');
+            }
+        });
+    }
 });

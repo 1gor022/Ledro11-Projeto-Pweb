@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Jogo - GameReview</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>GameReview Central</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="plataformas.html">Plataformas</a></li>
+                    <li><a href="add-game.html">Adicionar Jogo</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Cadastrar Novo Jogo</h2>
+            <form id="add-game-form">
+                
+                <div class="form-group">
+                    <label for="title">Título do Jogo</label>
+                    <input type="text" id="title" name="title" placeholder="Ex: Elden Ring" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">URL da Imagem (Capa)</label>
+                    <input type="url" id="image" name="image" placeholder="https://..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="score">Nota (0 a 5)</label>
+                    <input type="number" id="score" name="score" min="0" max="5" step="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="summary">Resumo / Review Curta</label>
+                    <textarea id="summary" name="summary" placeholder="O que você achou do jogo?"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Salvar Jogo</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GameReview Central.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
