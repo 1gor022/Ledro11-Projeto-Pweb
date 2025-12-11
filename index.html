@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameReview Central</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"></head>
 <body>
 
     <header>
@@ -16,8 +15,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="noticias.html">Notícias</a></li>
-                    <li><a href="plataformas.html">Plataformas</a></li>
                     <li><a href="add-game.html">Adicionar Jogo</a></li>
                 </ul>
             </nav>
@@ -25,12 +22,11 @@
     </header>
 
     <main>
-        <section class="featured-game">
+        <section class="featured-game" id="featured-section">
             <div class="container">
-                
-                <h2>Review Destaque: Dragon's Echo IV</h2>
-                <p>O retorno triunfante da franquia que definiu o gênero RPG de ação. Veja nossa análise completa...</p>
-                <a href="#" class="btn-primary">Ler Review</a>
+                <h2 id="featured-title">Carregando destaque...</h2>
+                <p id="featured-desc">Buscando o último lançamento...</p>
+                <a href="#" id="featured-btn" class="btn-primary">Ler Review</a>
             </div>
         </section>
 
@@ -43,7 +39,7 @@
 
 
                 <h3>Últimas Análises</h3>
-                <div class="reviews-grid">
+                <div class="game-list">
                     
                     <article class="game-card">
                         <img src="https://m.media-amazon.com/images/I/81MbNqp4PsL._AC_UF1000,1000_QL80_.jpg" alt="Capa do Jogo Cybernetic Dawn">
@@ -85,6 +81,17 @@
             <p>&copy; 2025 GameReview Central. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <div id="confirm-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Excluir Jogo?</h3>
+            <p>Essa ação não pode ser desfeita. Tem certeza que deseja remover este jogo?</p>
+            <div class="modal-actions">
+                <button class="btn-modal btn-cancel" id="modal-cancel">Cancelar</button>
+                <button class="btn-modal btn-confirm" id="modal-confirm">Sim, Excluir</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 

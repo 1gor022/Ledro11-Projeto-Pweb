@@ -5,50 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Jogo - GameReview</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"></head>
 <body>
 
     <header>
-        <header>
         <div class="container">
             <h1>GameReview Central</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="noticias.html">Notícias</a></li>
-                    <li><a href="plataformas.html">Plataformas</a></li>
                     <li><a href="add-game.html">Adicionar Jogo</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
-    <div class="game-hero" style="background-image: url('https://via.placeholder.com/1200x400');">
+    <div class="game-hero" id="hero-bg" style="background-image: url('https://via.placeholder.com/1200x400');">
         <div class="game-hero-content container">
             <div class="game-info">
-                <h1 id="game-title">Nome do Jogo Aqui</h1>
-                <div class="rating" data-score="9.5"></div> </div>
+                <h1 id="game-title">Carregando jogo...</h1>
+                
+                <div class="rating" id="game-rating" data-score="0"></div>
+            </div>
         </div>
     </div>
 
     <main class="container">
-        
-        <article class="review-body">
-            <h2>Análise Completa</h2>
-            <p>Aqui vai o texto completo da review. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </article>
+        <section class="game-details">
+            <div class="game-description">
+                <h3>Nosso Veredito</h3>
+                <p id="game-description">Buscando informações no servidor...</p>
+            </div>
 
-        <section class="comments-section">
-            <h3>Comentários da Comunidade</h3>
-            
-            <div class="form-container" style="margin: 0 0 2rem 0; max-width: 100%;">
-                <h4>Deixe sua opinião</h4>
-                <form id="comment-form">
+            <div class="comments-section">
+                <h3>Comentários da Comunidade</h3>
+                
+                <form class="comment-form">
                     <div class="form-group">
                         <input type="text" placeholder="Seu Nome" required>
                     </div>
@@ -57,26 +50,16 @@
                     </div>
                     <button type="submit" class="btn-primary">Publicar Comentário</button>
                 </form>
-            </div>
 
-            <div id="comments-list">
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">GamerPro2025</span>
-                        <span class="comment-date">Há 2 horas</span>
+                <div id="comments-list">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">Sistema</span>
+                            <span class="comment-date">Agora</span>
+                        </div>
+                        <p>Os comentários ainda são ilustrativos, mas o jogo acima veio do Banco de Dados!</p>
                     </div>
-                    <p>Concordo totalmente com a nota! A jogabilidade é incrível.</p>
                 </div>
-
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">AnaRPG</span>
-                        <span class="comment-date">Ontem</span>
-                    </div>
-                    <p>Achei a história meio fraca, mas os gráficos compensam.</p>
-                </div>
-
             </div>
         </section>
 
